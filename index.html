@@ -38,15 +38,30 @@
         .section {
             margin-bottom: 2rem;
         }
-        .download-btn {
+        .btn-group {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
             display: inline-block;
-            margin-top: 1rem;
             padding: 0.6rem 1.2rem;
             background-color: #0a9396;
             color: #fff;
             border: none;
             border-radius: 5px;
             text-decoration: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #007f87;
+        }
+        @media print {
+            .btn-group {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -98,7 +113,10 @@
     </ul>
 </div>
 
-<a class="download-btn" href="https://raw.githubusercontent.com/catal-gio/votaz-2025/main/PER_RIFLETTERE_GITHUB.pdf" target="_blank">📥 Scarica il PDF completo</a>
+<div class="btn-group">
+    <a class="btn" href="https://raw.githubusercontent.com/catal-gio/votaz-2025/main/PER_RIFLETTERE_GITHUB.pdf" target="_blank">📥 Scarica il PDF completo</a>
+    <button class="btn" onclick="window.print()">🖨️ Stampa la pagina</button>
+</div>
 
 </body>
 </html>
